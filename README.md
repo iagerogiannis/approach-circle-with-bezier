@@ -1,7 +1,7 @@
 # Approach Circle with Bezier Spline
 
-This project is an example and demonstration of application of numerical methods like Least Squares, and Newton-Raphson
-for systems, in optimization problems. 
+This project is an example and demonstration of application of numerical methods like Least Squares and Newton-Raphson
+in optimization problems. 
 
 The object of the project is the parameterization of a curve with Bezier spline, which tends to approach the circle and
 the minimization of the difference between the curve and the circle - target.
