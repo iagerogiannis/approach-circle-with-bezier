@@ -14,14 +14,79 @@ a same distance angularly. For each one of these point, a straight line is being
 that point Ki. Then we calculate the intercept points Qi of the lines and the Bezier spline. Next we apply the Least
 Squares method in order to minimize those radial distances KiQi.
 
-![The idea behind](readme/idea.png)
+<p align="center">
+  <img src="readme/Screenshot_0.png">
+</p>
 
 ## Mathematical Formulation
 
-Example
+### Parameterization
 
-## Result
+#### Parameterization of Bezier Spline
+
+The curve is parameterized with a Bezier spline of 6 Control Points. In order to simplify the problem and minimize the
+variables we exploit geometry symmetries, so that we have to define only 5 unknowns as shown in the graph above.
+
+<p align="center">
+  <img src="readme/Screenshot_1.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_2.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_3.png">
+</p>
+
+#### Parameterization of Circle
+
+<p align="center">
+  <img src="readme/Screenshot_4.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_5.png">
+</p>
+
+#### Parameterization of Straight Lines
+
+<p align="center">
+  <img src="readme/Screenshot_6.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_7.png">
+</p>
+
+### Calculation of Point Pairs Ki-Qi
+
+<p align="center">
+  <img src="readme/Screenshot_8.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_9.png">
+</p>
+
+### Minimization of the distances Ki-Qi
+
+<p align="center">
+  <img src="readme/Screenshot_10.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_11.png">
+</p>
+
+<p align="center">
+  <img src="readme/Screenshot_12.png">
+</p>
+
+## Results
 
 Result
 
-![Result](readme/animation.gif)
+<p align="center">
+  <img src="readme/animation.gif">
+</p>
