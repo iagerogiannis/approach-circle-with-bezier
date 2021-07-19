@@ -100,17 +100,28 @@ as shown in the figure above.
 
 ### Minimization of the distances Ki-Qi
 
+In order for the Bezier curve to approach the circle, we need to minimize the sum of distances Ki-Qi. So we set the
+following Error Functions.
+
 <p align="center">
   <img src="readme/Screenshot_10.png">
 </p>
+
+In order to find the parameters a, b, c, d, e, which minimize the error function their partial derivatives need to be equal to zero.
 
 <p align="center">
   <img src="readme/Screenshot_11.png">
 </p>
 
+Substituting the parametric equations in Error Functions and performing the operations, we end up to the following systems of equations.
+
 <p align="center">
   <img src="readme/Screenshot_12.png">
 </p>
+
+The solution of the above systems gives the parameters which minimize the distances Ki-Qi.
+Repeating the whole process (refresh Bezier control points, calculation of new point pairs and solution of the new system)
+gives a Bezier curve which approaches the circle even more.
 
 ## Results
 
