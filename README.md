@@ -1,17 +1,22 @@
-# Approach Circle with Bezier Spline
+# Approach Circle with Bézier Spline
 
-This project is an example and demonstration of application of numerical methods like Least Squares and Newton-Raphson
-in optimization problems. 
+This project is an example and demonstration of use of Bézier curve parameterization and application of numerical methods 
+like Least Squares and Newton-Raphson in optimization problems. In the project, library
+[numerical-analysis](https://github.com/iagerogiannis/numerical-analysis) is used. 
 
-The object of the project is the parameterization of a curve with Bezier spline, which tends to approach the circle and
+The object of the project is the parameterization of a curve with Bézier spline, which tends to approach the circle and
 the minimization of the difference between the curve and the circle - target.
+
+<p align="center">
+  <img src="readme/animation.gif">
+</p>
 
 ## The idea behind
 
-At first a Bezier spline of 6 Control Points gets initialized. Our goal is to calculate the control point coordinates
+At first a Bézier spline of 6 Control Points gets initialized. Our goal is to calculate the control point coordinates
 which minimize the distance between the circle and the spline. The circle - target gets divided in n points which are at
 a same distance angularly. For each one of these point, a straight line is being drawn from the center of the circle to
-that point Ki. Then we calculate the intercept points Qi of the lines and the Bezier spline. Next we apply the Least
+that point Ki. Then we calculate the intercept points Qi of the lines and the Bézier spline. Next we apply the Least
 Squares method in order to minimize those radial distances KiQi.
 
 <p align="center">
@@ -22,24 +27,24 @@ Squares method in order to minimize those radial distances KiQi.
 
 ### Parameterization
 
-#### Parameterization of Bezier Spline
+#### Parameterization of Bézier Spline
 
-The curve is parameterized with a Bezier spline of 6 Control Points. In order to simplify the problem and minimize the
+The curve is parameterized with a Bézier spline of 6 Control Points. In order to simplify the problem and minimize the
 variables we exploit geometry symmetries, so that we have to define only 5 unknowns as shown in the graph above.
 
-Bezier Spline's Control Points have the following coordinates:
+Bézier Spline's Control Points have the following coordinates:
 
 <p align="center">
   <img src="readme/Screenshot_1.png">
 </p>
 
-Bezier Spline gets parameterized as follows:
+Bézier Spline gets parameterized as follows:
 
 <p align="center">
   <img src="readme/Screenshot_2.png">
 </p>
 
-Performing the operations gives the following form of the final Bezier parameterization equations:
+Performing the operations gives the following form of the final Bézier parameterization equations:
 
 <p align="center">
   <img src="readme/Screenshot_3.png">
@@ -83,7 +88,7 @@ For the Calculation of the point pairs Ki-Qi we use the Newton-Raphson Method fo
   <img src="readme/Screenshot_8.png">
 </p>
 
-In order to calculate the intercept points between the Bezier curve and the line segments, we use the fact that on that point their parametric equations are equal:
+In order to calculate the intercept points between the Bézier curve and the line segments, we use the fact that on that point their parametric equations are equal:
 
 <p align="center">
   <img src="readme/Screenshot_13.png">
@@ -100,7 +105,7 @@ as shown in the figure above.
 
 ### Minimization of the distances Ki-Qi
 
-In order for the Bezier curve to approach the circle, we need to minimize the sum of distances Ki-Qi. So we set the
+In order for the Bézier curve to approach the circle, we need to minimize the sum of distances Ki-Qi. So we set the
 following Error Functions.
 
 <p align="center">
@@ -120,8 +125,8 @@ Substituting the parametric equations in Error Functions and performing the oper
 </p>
 
 The solution of the above systems gives the parameters which minimize the distances Ki-Qi.
-Repeating the whole process (refresh Bezier control points, calculation of new point pairs and solution of the new system)
-gives a Bezier curve which approaches the circle even more.
+Repeating the whole process (refresh Bézier control points, calculation of new point pairs and solution of the new system)
+gives a Bézier curve which approaches the circle even more.
 
 ## Results
 
