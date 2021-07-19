@@ -14,7 +14,9 @@ a same distance angularly. For each one of these point, a straight line is being
 that point Ki. Then we calculate the intercept points Qi of the lines and the Bezier spline. Next we apply the Least
 Squares method in order to minimize those radial distances KiQi.
 
-![The idea behind](readme/idea.png)
+<p align="center">
+  <img src="readme/idea.png">
+</p>
 
 ## Mathematical Formulation
 
@@ -24,4 +26,6 @@ Example
 
 Result
 
-![Result](readme/animation.gif)
+<p align="center">
+  <img src="readme/animation.gif">
+</p>
