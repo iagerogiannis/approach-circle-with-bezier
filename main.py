@@ -10,7 +10,7 @@ circle_parameters = {"center": C,
 
 initial_parameters = [0., 0., 3., 8., 2.]
 
-d_phi = 2 * math.pi / 300
+d_phi = 2 * math.pi / 200
 
 approacher = CircleApproacher(circle_parameters, initial_parameters)
-approacher.solve(d_phi, iterations=3000, error=1e-12, csv_fname="results300")
+approacher.solve(d_phi, iterations=3000, error=1e-12, csv_fname="results200")

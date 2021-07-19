@@ -163,8 +163,7 @@ class CircleApproacher:
             if plots_path and (i < 20 or i % 10 == 0.):
                 bezier_graph = self.bezier.graph(0.01)
                 plot_exporter.create_plot(self.circle_graph, bezier_graph,
-                                          title="Approach Circle w/ Bezier (Iteration {})".format(i),
-                                          axes_equal=True, x_lim=[-.5, 4.], y_lim=[-2., 2.])
+                                          title="Approach Circle w/ Bezier (Iteration {})".format(i), axes_equal=True)
                 plot_exporter.export_plot("gen_{}".format(str(i).zfill(4)))
 
         divisions = 2 * math.pi / d_phi

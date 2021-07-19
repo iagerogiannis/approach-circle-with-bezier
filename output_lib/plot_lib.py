@@ -11,13 +11,11 @@ class PlotExporter:
         self.file_type = file_type
 
     def create_plot(self, *plots, title=None, x_label=None, y_label=None,
-                    axes_equal=False, x_lim=None, y_lim=None):
+                    axes_equal=False, x_lim=[-.5, 4.], y_lim=[-2., 2.]):
+        plt.xlim(*x_lim)
+        plt.ylim(*y_lim)
         if axes_equal:
             plt.axis('square')
-        if x_lim:
-            plt.xlim(*x_lim)
-        if y_lim:
-            plt.ylim(*y_lim)
         for plot in plots:
             plt.plot(plot[0], plot[1])
         if title:

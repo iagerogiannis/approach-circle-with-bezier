@@ -128,10 +128,22 @@ The solution of the above systems gives the parameters which minimize the distan
 Repeating the whole process (refresh Bézier control points, calculation of new point pairs and solution of the new system)
 gives a Bézier curve which approaches the circle even more.
 
-## Results
+## Example
 
-Result
+We consider the circle with Center (1.5, 0.0) and Radius 1.5. Applying the above computational procedure for 200 
+divisions, converges after 2862 iterations with precision of 12 decimal digits and give the following solution:
 
 <p align="center">
-  <img src="readme/animation.gif">
+  <img src="readme/final.png">
 </p>
+
+a = -0.002099698908
+b = 0.044430315301
+c = 2.527066723502
+d = 4.777153326767
+e = 2.981660848261
+
+The mean distance Ki-Qi equals to err = 0.000412943915 which is of order of 0.0275% of the radius.
+
+Applying the procedure for a different number of circle divisions would result the algorithm to converge to a 
+slightly different solution.
